@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Showcase</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#8B5CF6'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">my projects</h1>
+            <p class="text-xl text-gray-600">a showcase of my work and experiments</p>
+        </header>
+
+        <!-- Filter buttons (for future categories) -->
+        <div class="flex justify-center mb-8">
+            <div class="flex flex-wrap gap-2" id="filter-buttons">
+                <button class="px-4 py-2 bg-primary text-white rounded-full text-sm font-medium transition-all hover:bg-blue-600 active" data-category="all">
+                    all projects
+                </button>
+            </div>
+        </div>
+
+        <!-- Projects grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="projects-grid">
+            <!-- Projects will be dynamically inserted here -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
